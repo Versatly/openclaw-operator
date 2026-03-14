@@ -87,6 +87,35 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
         </div>
       </article>
 
+      <section className="mx-auto w-full max-w-4xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-3xl font-semibold text-onyx">
+          Deployment standards for long-term results in Miami and South Florida
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-8 text-onyx/85">
+          <p>
+            Across every industry we serve, the same pattern appears: teams get the best AI outcomes
+            when deployment is treated like operational infrastructure, not a one-time software
+            installation. That means clear ownership, role-based controls, documented escalation
+            paths, and measurable service-level goals. Without those standards, even strong AI tools
+            can create inconsistent execution in daily business environments.
+          </p>
+          <p>
+            Our Miami and South Florida implementations are designed around this reality. We start
+            with focused scope, validate quality under real workload conditions, and then expand
+            responsibly. This staged model protects service quality while helping your team build
+            confidence in automation. It also prevents the common trap of over-automating too early
+            and spending months cleaning up process drift.
+          </p>
+          <p>
+            If your leadership team wants sustainable ROI, governance and optimization must continue
+            after launch. We review output quality, workflow adherence, and performance trends each
+            month so improvements compound over time. That ongoing discipline is what turns OpenClaw
+            from an experiment into a dependable operating layer for organizations across Miami-Dade
+            and the broader South Florida market.
+          </p>
+        </div>
+      </section>
+
       <section className="mx-auto w-full max-w-4xl px-4 pb-6 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl font-semibold text-onyx">Related resources</h2>
         <div className="mt-4 flex flex-wrap gap-3 text-sm">
