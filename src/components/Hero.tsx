@@ -57,8 +57,8 @@ export default function Hero() {
           <div className="mt-6 space-y-4">
             <blockquote className="rounded-2xl border border-onyx/10 bg-white p-4">
               <p className="text-sm leading-7 text-onyx/80">
-                "We replaced endless inbox cleanup with a system that routes, drafts, and escalates
-                correctly day and night."
+                &ldquo;We replaced endless inbox cleanup with a system that routes, drafts, and
+                escalates correctly day and night.&rdquo;
               </p>
               <cite className="mt-3 block text-xs font-semibold uppercase tracking-wide text-onyx/60">
                 Alex - Multi-location hospitality group
@@ -66,7 +66,8 @@ export default function Hero() {
             </blockquote>
             <blockquote className="rounded-2xl border border-onyx/10 bg-white p-4">
               <p className="text-sm leading-7 text-onyx/80">
-                "Our coordinators recovered hours each week while follow-through quality improved."
+                &ldquo;Our coordinators recovered hours each week while follow-through quality
+                improved.&rdquo;
               </p>
               <cite className="mt-3 block text-xs font-semibold uppercase tracking-wide text-onyx/60">
                 Priya - Construction services company
