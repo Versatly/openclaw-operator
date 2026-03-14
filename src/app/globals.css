@@ -14,22 +14,26 @@ body {
   background: #ffffff;
   color: #121416;
   min-height: 100vh;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-playfair-display), ui-serif, Georgia, Cambria, "Times New Roman", serif;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg bg-tiger px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90;
+  @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-tiger to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
+  @apply inline-flex items-center justify-center rounded-xl border border-onyx/20 bg-white px-6 py-3 text-sm font-semibold text-onyx transition hover:-translate-y-0.5 hover:bg-onyx/5;
+}
+
+.btn-secondary-dark {
+  @apply inline-flex items-center justify-center rounded-xl border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10;
 }
 
 @media (prefers-reduced-motion: no-preference) {
