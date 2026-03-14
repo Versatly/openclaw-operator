@@ -17,10 +17,19 @@ import {
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "AI Agent Deployment for Miami & South Florida Businesses",
+  title: "Miami OpenClaw Setup — Professional AI Agent Deployment",
   description:
-    "OpenClaw setup Miami service by Versatly. We deploy and manage secure AI agents for South Florida businesses with integrations and ongoing optimization.",
+    "Miami OpenClaw setup by Versatly. Professional OpenClaw deployment, security hardening, and managed AI agent service for Miami and South Florida businesses. Free consultation.",
   path: "/",
+  keywords: [
+    "miami openclaw setup",
+    "openclaw setup miami",
+    "openclaw deployment miami",
+    "ai agent setup miami",
+    "openclaw installation miami",
+    "openclaw consultant miami",
+    "openclaw managed service miami",
+  ],
 });
 
 export default function HomePage() {
@@ -44,11 +53,17 @@ export default function HomePage() {
     areaServed: siteConfig.areasServed,
     priceRange: "$$",
     serviceType: [
+      "miami openclaw setup",
       "openclaw setup miami",
+      "openclaw deployment miami",
       "openclaw deployment south florida",
+      "ai agent setup miami",
       "ai assistant deployment miami",
       "openclaw installation service",
+      "openclaw managed service florida",
     ],
+    description: "Professional Miami OpenClaw setup and managed AI agent deployment service. Versatly deploys, hardens, and manages OpenClaw for businesses.",
+    knowsAbout: ["OpenClaw", "AI agents", "AI assistant deployment", "business automation"],
   };
 
   const faqSchema = {

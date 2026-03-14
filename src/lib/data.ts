@@ -30,11 +30,14 @@ export const siteConfig = {
 } as const;
 
 export const primaryKeywords = [
+  "miami openclaw setup",
   "openclaw setup miami",
+  "openclaw deployment miami",
   "openclaw deployment south florida",
   "ai agent setup miami",
   "ai assistant deployment miami",
   "openclaw installation service",
+  "openclaw installation miami",
 ];
 
 export const secondaryKeywords = [

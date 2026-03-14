@@ -1,0 +1,54 @@
+# OpenClaw Operator by Versatly
+
+> Professional OpenClaw deployment, hardening, and managed service. Headquartered in Miami, serving businesses nationwide and remotely worldwide.
+
+## What We Do
+
+Versatly deploys and manages OpenClaw AI agents for businesses. We handle the full lifecycle: setup, security hardening, integration with your tools (email, calendar, Slack, CRM), and ongoing optimization.
+
+## Services
+
+- OpenClaw Setup & Deployment: Environment setup, prompt/role configuration, launch checklists
+- Security Hardening: Access control, audit trails, permission boundaries, data safeguards
+- Integration Configuration: Email triage, calendar management, Slack monitoring, CRM automation
+- Managed Support: Monthly optimization, incident response, workflow tuning, quarterly roadmaps
+- Remote Installation: We deploy remotely via video call — worldwide, any timezone
+
+## Who We Serve
+
+- Founders & CEOs needing operational leverage
+- Executive teams (CFO, Head of Sales, EA — each gets their own agent)
+- Restaurants & Hospitality
+- Construction & Field Services
+- Real Estate Teams
+- Marketing & Creative Agencies
+- Law Firms & Professional Services
+
+## Pricing
+
+- Free Consultation: $0 — 45-minute strategy session
+- Setup & Deployment: From $997 — one-time implementation
+- Managed Care: From $297/mo — ongoing optimization and support
+
+## Location
+
+Headquartered in Miami, Florida. We serve clients nationwide and internationally via remote deployment.
+
+## Contact
+
+- Website: https://openclawoperator.com
+- Email: hello@versatly.com
+- Book a Call: https://cal.com/versatly/quick-chat
+
+## Detailed Pages
+
+- [Services](/services)
+- [Industries](/industries)
+- [Blog](/blog)
+- [About](/about)
+- [Contact](/contact)
+- [AI Agents for Miami Restaurants](/industries/restaurants)
+- [AI Automation for South Florida Construction](/industries/construction)
+- [AI Assistant for Miami Real Estate](/industries/real-estate)
+- [AI Agent for Miami Marketing Agencies](/industries/agencies)
+- [AI Automation for South Florida Law Firms](/industries/law-firms)

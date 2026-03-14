@@ -1,0 +1,155 @@
+# OpenClaw Operator by Versatly — Full Context
+
+> Professional OpenClaw deployment, hardening, and managed service for businesses. Headquartered in Miami, Florida. Serving clients nationwide and remotely worldwide.
+
+## About Versatly
+
+Versatly deploys and scales autonomous AI employees inside businesses. OpenClaw Operator is our dedicated service for OpenClaw — the open-source AI assistant platform. We handle everything from initial setup to ongoing managed optimization so businesses can focus on customers, growth, and execution.
+
+We are not a generic IT shop. We specialize in OpenClaw deployment with deep expertise in security hardening, workflow design, and integration architecture. Our team has deployed OpenClaw for restaurants, construction companies, real estate brokerages, marketing agencies, and law firms across South Florida and beyond.
+
+## Why Businesses Choose Us
+
+OpenClaw is open-source — you could set it up yourself. But production-grade deployment requires:
+- Security hardening (access control, audit trails, Docker sandboxing, firewall rules)
+- Custom workflow design (email triage rules, escalation logic, approval checkpoints)
+- Integration with your existing tools (Gmail, Outlook, Google Calendar, Slack, HubSpot, Salesforce, etc.)
+- Ongoing optimization (prompt tuning, workflow refinement, performance monitoring)
+
+We handle all of this. Think of us as your OpenClaw operations team.
+
+## Services
+
+### OpenClaw Setup & Deployment
+We install and configure OpenClaw for your business with a fast, clean launch.
+- Environment setup on VPS or Mac Mini (your choice)
+- Prompt and role configuration tailored to your workflows
+- Channel setup (Telegram, WhatsApp, Slack, Discord)
+- Launch checklists and go-live support
+
+### Security Hardening
+Production-grade security from day one.
+- Access control and permission boundaries
+- Docker sandboxing and firewall configuration
+- Audit trails and logging
+- Data handling safeguards for customer-facing workflows
+- Ongoing policy tuning as your business evolves
+
+### Integration Configuration
+We connect OpenClaw to the tools your team already uses.
+- Email triage and inbox categorization (Gmail, Outlook, Zoho)
+- Calendar management and meeting preparation
+- Slack/Discord monitoring and escalation routing
+- CRM automation (HubSpot, Salesforce, Pipedrive)
+- Task management integration (Notion, Linear, Asana)
+
+### Managed Support (Monthly)
+Ongoing optimization so your AI agent keeps improving.
+- Usage analytics and workflow performance dashboards
+- Prompt tuning and escalation rule refinement
+- Rapid incident response
+- Quarterly strategic roadmap sessions with your leadership team
+
+### Remote Installation
+We deploy OpenClaw remotely for clients anywhere in the world.
+- Full setup via video call — typically 1-3 hours
+- Same security hardening and integration quality as on-site
+- 14-day hypercare included with every deployment
+- Dedicated support channel (Slack or Telegram)
+
+## Pricing
+
+| Tier | Price | Details |
+|------|-------|---------|
+| Free Consultation | $0 | 45-minute strategy session — workflow mapping, ROI analysis, deployment planning |
+| Setup & Deployment | From $997 | One-time: installation, integration, security baseline, go-live support |
+| Managed Care | From $297/mo | Monthly: optimization, incident response, workflow tuning, roadmap support |
+
+Prices vary based on integration complexity and compliance requirements. Every engagement starts with a free consultation.
+
+## Industries We Serve
+
+### Restaurants & Hospitality
+- Route reservation and event inquiry emails automatically
+- Monitor delivery platform issues in real-time
+- Summarize guest feedback across review platforms
+- Reduce front-office coordination overhead during peak hours
+- Multilingual support (English/Spanish) for South Florida markets
+
+### Construction & Field Services
+- Triage project communications by urgency and stakeholder
+- Automate subcontractor update follow-ups
+- Track permit status and deadline reminders
+- Organize inbox by project for faster context retrieval
+- CRM automation for preconstruction pipelines
+
+### Real Estate
+- Lead intake and qualification routing
+- Showing coordination and calendar management
+- Listing update tracking and CRM hygiene
+- Follow-up sequence automation
+- Pipeline visibility for brokerage leadership
+
+### Marketing & Creative Agencies
+- Campaign inbox monitoring and client request summarization
+- Status report preparation from Slack threads
+- Account handoff documentation
+- CRM pipeline automation for business development
+- Consistent workflow standards across account teams
+
+### Law Firms & Professional Services
+- Intake screening and document request triage
+- Meeting preparation with context packets
+- Deadline monitoring and reminder orchestration
+- Scoped permissions and compliance-ready audit trails
+- Governance controls for sensitive communications
+
+## How It Works
+
+1. **Kickoff Call** — We discuss your goals, map your integrations, and plan your agent's workflows. You tell us what to automate — we handle the rest.
+
+2. **Deploy & Harden** — We set up your infrastructure, install OpenClaw, configure security, connect your tools, and build workflow logic. Most teams go live same day.
+
+3. **14-Day Hypercare** — We tune workflows, expand permissions as you build trust, fix edge cases, and ensure everything runs smoothly. Dedicated support channel.
+
+4. **Managed Optimization** — After hypercare, ongoing monthly optimization keeps your agent improving. We monitor performance, tune prompts, and expand capabilities.
+
+## Location & Coverage
+
+**Headquarters:** Miami, Florida
+**Service Area:** Nationwide (United States) + International (remote deployment)
+
+We serve clients in:
+- Miami, Fort Lauderdale, West Palm Beach (South Florida — local)
+- Tampa, Orlando, Jacksonville (Florida statewide)
+- New York, Los Angeles, Chicago, Atlanta, Austin, Denver, Seattle (nationwide)
+- Canada, Europe, and worldwide (remote deployment)
+
+Most of our deployments are done remotely via video call. No in-person visit required.
+
+## Contact
+
+- **Website:** https://openclawoperator.com
+- **Email:** hello@versatly.com
+- **Book a Call:** https://cal.com/versatly/quick-chat
+- **Company:** Versatly (https://versatly.com)
+
+## FAQ
+
+**What is OpenClaw?**
+OpenClaw is an open-source AI assistant that runs 24/7 on dedicated infrastructure. It can triage email, schedule meetings, draft replies, monitor Slack, and automate workflows across your tools — proactively, without you asking.
+
+**Do I need to be technical?**
+Not at all. We handle everything — you don't touch a terminal or write any code. After setup, you talk to your bot through Telegram, Slack, or WhatsApp just like texting an assistant.
+
+**Do I need to be in Miami?**
+No. Most customers are remote — we set everything up over a video call regardless of where you are.
+
+**How long does deployment take?**
+Most deployments complete in 1-3 weeks depending on integration complexity. Simple setups (email + calendar) can launch same-day.
+
+**Is my data secure?**
+Security is built into every stage. We implement role-based permissions, Docker sandboxing, firewall hardening, audit trails, and scoped integrations. Your data stays on your infrastructure.
+
+**What's the difference between OpenClaw Operator and SetupClaw?**
+Both offer OpenClaw deployment services. We differentiate through deep industry expertise (restaurants, construction, real estate, agencies, law firms), managed ongoing optimization, and strong local presence in South Florida with nationwide remote coverage.

@@ -13,20 +13,25 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: "OpenClaw Operator Miami | Versatly AI Agent Deployment",
+    default: "Miami OpenClaw Setup & Managed Deployment | Versatly",
     template: "%s | OpenClaw Operator by Versatly",
   },
   description:
-    "Versatly deploys and manages OpenClaw AI agents for Miami and South Florida businesses with secure setup, integrations, and ongoing optimization.",
+    "Miami OpenClaw setup service by Versatly. We deploy, harden, and manage OpenClaw AI agents for businesses. Email triage, calendar management, Slack monitoring, CRM automation. Free consultation.",
   applicationName: siteConfig.siteName,
-  keywords: [...primaryKeywords, ...secondaryKeywords],
+  keywords: [
+    "miami openclaw setup",
+    "openclaw setup miami",
+    ...primaryKeywords,
+    ...secondaryKeywords,
+  ],
   authors: [{ name: siteConfig.brand }],
   creator: siteConfig.brand,
   publisher: siteConfig.brand,
   openGraph: {
-    title: "OpenClaw Operator Miami | Versatly AI Agent Deployment",
+    title: "Miami OpenClaw Setup & Managed AI Agent Deployment | Versatly",
     description:
-      "OpenClaw setup and managed deployment for Miami and South Florida businesses. Email triage, calendar workflows, Slack monitoring, and CRM automation.",
+      "Miami OpenClaw setup and managed deployment service. Professional AI agent deployment with security hardening, integrations, and ongoing optimization for businesses.",
     url: siteConfig.domain,
     type: "website",
     locale: "en_US",
@@ -36,20 +41,27 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "OpenClaw Operator by Versatly for South Florida businesses",
+        alt: "Miami OpenClaw Setup — Professional AI Agent Deployment by Versatly",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OpenClaw Operator Miami | Versatly AI Agent Deployment",
+    title: "Miami OpenClaw Setup & Managed Deployment | Versatly",
     description:
-      "OpenClaw setup and managed AI agent deployment for Miami and South Florida businesses.",
+      "Professional Miami OpenClaw setup and managed AI agent deployment. Security hardening, integrations, and ongoing optimization.",
     images: ["/opengraph-image"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
