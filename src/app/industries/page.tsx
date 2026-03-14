@@ -1,6 +1,7 @@
 import CTA from "@/components/CTA";
 import IndustryCard from "@/components/IndustryCard";
 import JsonLd from "@/components/JsonLd";
+import Link from "next/link";
 import { industries } from "@/lib/data";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
@@ -38,6 +39,17 @@ export default function IndustriesPage() {
           {industries.map((industry) => (
             <IndustryCard key={industry.slug} industry={industry} />
           ))}
+        </div>
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link href="/services" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Compare services
+          </Link>
+          <Link href="/blog" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Read deployment guides
+          </Link>
+          <Link href="/contact" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Talk to our team
+          </Link>
         </div>
       </section>
 

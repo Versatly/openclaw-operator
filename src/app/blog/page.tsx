@@ -57,6 +57,17 @@ export default function BlogIndexPage() {
             </article>
           ))}
         </div>
+        <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <Link href="/services" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            OpenClaw services
+          </Link>
+          <Link href="/industries" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Industry pages
+          </Link>
+          <Link href="/contact" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Book consultation
+          </Link>
+        </div>
       </section>
 
       <CTA

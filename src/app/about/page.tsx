@@ -1,4 +1,5 @@
 import CTA from "@/components/CTA";
+import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/lib/data";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
@@ -74,6 +75,17 @@ export default function AboutPage() {
             <strong>Engagement style:</strong> Remote-first delivery with local-market strategy and support.
           </li>
         </ul>
+        <div className="mt-8 flex flex-wrap gap-3 text-sm">
+          <Link href="/services" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Explore services
+          </Link>
+          <Link href="/industries" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Browse industry pages
+          </Link>
+          <Link href="/blog" className="rounded-full border border-onyx/15 px-4 py-2 hover:border-tiger hover:text-tiger">
+            Read AI guides
+          </Link>
+        </div>
       </section>
 
       <CTA

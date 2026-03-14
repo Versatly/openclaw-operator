@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "OpenClaw Operator by Versatly";
 export const size = {
   width: 1200,

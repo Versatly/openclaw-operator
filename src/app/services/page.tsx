@@ -72,6 +72,64 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="mx-auto w-full max-w-6xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
+          Detailed service breakdown
+        </h2>
+        <div className="mt-8 space-y-8">
+          <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
+            <h3 className="font-heading text-2xl font-semibold text-onyx">Setup &amp; Deployment</h3>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              We handle OpenClaw environment architecture, deployment pipelines, role definitions,
+              and initial workflow programming. This includes practical setup for Miami businesses
+              that need fast implementation without skipping reliability basics.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              Every deployment starts with a clear scope and execution map so your team understands
+              exactly what is automated, where approvals are required, and what success metrics are
+              tracked during launch.
+            </p>
+          </article>
+          <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
+            <h3 className="font-heading text-2xl font-semibold text-onyx">Security Hardening</h3>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              We design role-based access controls, establish escalation policies, and configure
+              restricted automation boundaries so your OpenClaw deployment supports daily operations
+              while preserving governance standards.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              Hardening also includes audit visibility and edge-case testing. For South Florida
+              teams handling sensitive customer and internal data, this is the difference between a
+              risky experiment and a dependable production system.
+            </p>
+          </article>
+          <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
+            <h3 className="font-heading text-2xl font-semibold text-onyx">Integration Configuration</h3>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              We integrate OpenClaw with operational tools your team already uses, including email
+              triage workflows, calendar management workflows, Slack monitoring rules, and CRM
+              automation pipelines for cleaner records and faster follow-up cycles.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              This integration-first approach reduces context switching and increases adoption because
+              automation appears in your existing systems instead of forcing a disconnected process.
+            </p>
+          </article>
+          <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
+            <h3 className="font-heading text-2xl font-semibold text-onyx">Ongoing Managed Support</h3>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              After launch, we provide monthly optimization for prompt logic, routing quality,
+              workflow expansion, and incident response. Your OpenClaw system evolves alongside your
+              operations so automation value compounds over time.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-onyx/80">
+              Our managed support is built for Miami and South Florida businesses that need a local
+              partner mindset, clear accountability, and measurable outcomes from AI deployment.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section className="bg-onyx text-white">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-semibold sm:text-4xl">
