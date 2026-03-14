@@ -98,11 +98,17 @@ We deploy OpenClaw remotely for clients anywhere in the world.
 
 | Tier | Price | Details |
 |------|-------|---------|
-| Free Consultation | $0 | 45-minute strategy session — workflow mapping, ROI analysis, deployment planning |
-| Setup & Deployment | From $997 | One-time: installation, integration, security baseline, go-live support |
-| Managed Care | From $297/mo | Monthly: optimization, incident response, workflow tuning, roadmap support |
+| 1 Executive Agent | $3,000 (one-time) | VPS or Mac Mini provisioning, security hardening (Docker, firewall, exec allowlists), email & calendar integration, up to 3 workflow automations, 14-day hypercare, go live same day |
+| Additional Agent | $1,500 each (one-time) | Separate identity (CFO, Sales, EA, etc.), own inbox & calendar access, custom workflow configuration, shared context with other agents, 14-day hypercare included |
+| Managed Care | Custom (monthly, per agent) | OAuth token rotation & updates, workflow drift monitoring & fixes, OpenClaw version updates, integration maintenance, priority support via Slack/Telegram, monthly optimization reviews |
 
-Prices vary based on integration complexity and compliance requirements. Every engagement starts with a free consultation.
+**What's an "Executive Agent"?** 1 Executive Agent = 1 OpenClaw instance configured for one primary identity (CEO inbox/calendar, CFO inbox, Head of Sales, shared EA inbox). This keeps pricing fair and security boundaries clean. Most 4–50 employee teams deploy 2–6 agents.
+
+**Infrastructure costs:** Most customers deploy on a cloud VPS ($5–10/mo). Mac Mini available for teams that need iMessage or prefer local hardware (~$600 at cost, provided at cost).
+
+**100% satisfaction guarantee** — if you're not happy with the setup, we'll refund you. No questions asked.
+
+Every engagement starts with a free consultation — book at cal.com/versatly/quick-chat.
 
 ## Industries We Serve
 

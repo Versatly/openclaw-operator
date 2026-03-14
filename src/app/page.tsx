@@ -157,20 +157,55 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-          Pricing for OpenClaw managed service in Florida
+          Pricing for OpenClaw deployment
         </h2>
+        <p className="mt-4 max-w-3xl text-onyx/80">
+          One-time setup fee. Most customers deploy on a cloud VPS ($5–10/mo) — we handle setup remotely.
+          Mac Mini available for teams that need iMessage or prefer local hardware (~$600 at cost).
+        </p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {pricing.map((item) => (
-            <article key={item.title} className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
+          {pricing.map((item, index) => (
+            <article
+              key={item.title}
+              className={`reveal rounded-2xl border p-6 shadow-sm ${
+                index === 0
+                  ? "border-tiger/30 bg-tiger/5 ring-1 ring-tiger/20"
+                  : "border-onyx/10 bg-white"
+              }`}
+            >
+              {index === 0 && (
+                <span className="mb-3 inline-block rounded-full bg-tiger px-3 py-1 text-xs font-semibold text-white">
+                  Most Popular
+                </span>
+              )}
               <p className="text-sm uppercase tracking-wide text-onyx/60">{item.title}</p>
-              <p className="mt-3 font-heading text-3xl font-semibold text-onyx">{item.price}</p>
-              <p className="mt-4 text-sm leading-7 text-onyx/80">{item.detail}</p>
+              <p className="mt-2 font-heading text-4xl font-semibold text-onyx">{item.price}</p>
+              <p className="mt-1 text-sm text-onyx/60">{item.detail}</p>
+              <ul className="mt-6 space-y-3">
+                {item.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-onyx/80">
+                    <span className="mt-0.5 text-tiger">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              {item.note && (
+                <p className="mt-6 text-xs leading-5 text-onyx/50">{item.note}</p>
+              )}
             </article>
           ))}
         </div>
-        <p className="mt-6 text-sm text-onyx/70">
-          Prices vary based on integration complexity and compliance requirements. Every engagement
-          starts with a free consultation.
+        <div className="mt-8 rounded-xl border border-green-200 bg-green-50 px-6 py-4">
+          <p className="text-sm font-medium text-green-800">
+            💰 100% satisfaction guarantee — if you&apos;re not happy with the setup, we&apos;ll refund you. No questions asked.
+          </p>
+        </div>
+        <p className="mt-4 text-sm text-onyx/70">
+          Implementation includes 14-day hypercare. Ongoing support requires Managed Care subscription.
+          Every engagement starts with a free consultation —{" "}
+          <a href="https://cal.com/versatly/quick-chat" target="_blank" rel="noreferrer" className="text-tiger hover:underline">
+            book a call
+          </a>.
         </p>
       </section>
 

@@ -159,24 +159,50 @@ export const processSteps = [
 
 export const pricing = [
   {
-    title: "Free Consultation",
-    price: "$0",
-    detail:
-      "45-minute strategy session focused on your current workflows, team constraints, and ROI opportunities.",
+    title: "1 Executive Agent",
+    price: "$3,000",
+    detail: "One-time setup fee",
+    features: [
+      "VPS or Mac Mini provisioning",
+      "Security hardening (Docker, firewall, exec allowlists)",
+      "Email & calendar integration",
+      "Up to 3 workflow automations",
+      "14-day hypercare included",
+      "Go live same day",
+    ],
+    note: "Most customers deploy on a cloud VPS ($5–10/mo). Mac Mini available for teams that need iMessage (~$600 at cost).",
   },
   {
-    title: "Setup & Deployment",
-    price: "From $997",
-    detail:
-      "One-time implementation for OpenClaw installation, integration setup, security baseline, and go-live support.",
+    title: "Additional Agent",
+    price: "$1,500",
+    detail: "Per agent, one-time",
+    features: [
+      "Separate identity (CFO, Sales, EA, etc.)",
+      "Own inbox & calendar access",
+      "Custom workflow configuration",
+      "Shared context with other agents",
+      "14-day hypercare included",
+      "Scales to 2–6+ agents per team",
+    ],
+    note: "Most 4–50 employee teams deploy 2–6 agents: CEO bot, Sales bot, Finance bot — all coordinating together.",
   },
   {
     title: "Managed Care",
-    price: "From $297/mo",
-    detail:
-      "Monthly optimization, incident response, workflow tuning, and roadmap support for sustained performance.",
+    price: "Custom",
+    detail: "Monthly, per agent",
+    features: [
+      "OAuth token rotation & updates",
+      "Workflow drift monitoring & fixes",
+      "OpenClaw version updates",
+      "Integration maintenance",
+      "Priority support via Slack/Telegram",
+      "Monthly optimization reviews",
+    ],
+    note: "Implementation includes 14-day hypercare. Ongoing support requires Managed Care.",
   },
 ];
+
+export const pricingGuarantee = "100% satisfaction guarantee — if you're not happy with the setup, we'll refund you. No questions asked.";
 
 export const testimonials = [
   {

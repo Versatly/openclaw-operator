@@ -37,9 +37,12 @@ We don't just deploy OpenClaw — we build the tools that make it powerful.
 
 ## Pricing
 
-- Free Consultation: $0 — 45-minute strategy session
-- Setup & Deployment: From $997 — one-time implementation
-- Managed Care: From $297/mo — ongoing optimization and support
+- 1 Executive Agent: $3,000 one-time — VPS/Mac Mini provisioning, security hardening, email & calendar integration, up to 3 workflows, 14-day hypercare, go live same day
+- Additional Agent: $1,500 each — separate identity (CFO, Sales, EA), own inbox & calendar, custom workflows, shared context
+- Managed Care: Custom monthly — OAuth rotation, workflow monitoring, updates, integration maintenance, priority support
+- 100% satisfaction guarantee — not happy with setup? Full refund, no questions asked
+- VPS hosting: $5–10/mo. Mac Mini: ~$600 at cost (for iMessage)
+- Free consultation to start: book at cal.com/versatly/quick-chat
 
 ## Location
 

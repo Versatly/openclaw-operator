@@ -32,15 +32,17 @@ export default function ServicesPage() {
     offers: [
       {
         "@type": "Offer",
-        name: "OpenClaw Setup & Deployment",
-        price: "997",
+        name: "1 Executive Agent Setup",
+        price: "3000",
         priceCurrency: "USD",
+        description: "One-time setup: VPS/Mac Mini provisioning, security hardening, email & calendar integration, up to 3 workflows, 14-day hypercare",
       },
       {
         "@type": "Offer",
-        name: "Managed Care",
-        price: "297",
+        name: "Additional Agent",
+        price: "1500",
         priceCurrency: "USD",
+        description: "Per additional agent with separate identity, inbox, and custom workflows",
       },
     ],
     description:
@@ -165,25 +167,26 @@ export default function ServicesPage() {
           Service pathways
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
-            <h3 className="font-heading text-xl font-semibold text-onyx">Free Consultation</h3>
+          <article className="reveal rounded-2xl border border-tiger/30 bg-tiger/5 p-6 shadow-sm ring-1 ring-tiger/20">
+            <span className="mb-2 inline-block rounded-full bg-tiger px-3 py-1 text-xs font-semibold text-white">Most Popular</span>
+            <h3 className="font-heading text-xl font-semibold text-onyx">1 Executive Agent — $3,000</h3>
             <p className="mt-3 text-sm leading-7 text-onyx/80">
-              We review your current operating model, define high-impact workflows, and map an
-              implementation path tailored to your Miami or South Florida business.
+              One-time setup: VPS or Mac Mini provisioning, security hardening, email &amp; calendar integration,
+              up to 3 workflow automations, and 14-day hypercare. Go live same day.
             </p>
           </article>
           <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
-            <h3 className="font-heading text-xl font-semibold text-onyx">Setup from $997</h3>
+            <h3 className="font-heading text-xl font-semibold text-onyx">Additional Agent — $1,500</h3>
             <p className="mt-3 text-sm leading-7 text-onyx/80">
-              Includes architecture, OpenClaw deployment, initial integration configuration, security
-              baseline hardening, and launch support with documented workflows.
+              Per additional agent with separate identity (CFO, Sales, EA). Own inbox &amp; calendar,
+              custom workflows, shared context with other agents. 14-day hypercare included.
             </p>
           </article>
           <article className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
-            <h3 className="font-heading text-xl font-semibold text-onyx">Managed Care from $297/mo</h3>
+            <h3 className="font-heading text-xl font-semibold text-onyx">Managed Care — Custom/mo</h3>
             <p className="mt-3 text-sm leading-7 text-onyx/80">
-              Monthly optimization, monitoring, incident response, and roadmap expansion to ensure
-              your AI assistant deployment continues delivering measurable value.
+              OAuth rotation, workflow monitoring, OpenClaw updates, integration maintenance, priority support,
+              and monthly optimization reviews. Keeps everything running so you don&apos;t have to.
             </p>
           </article>
         </div>
