@@ -6,7 +6,44 @@
 
 Versatly deploys and scales autonomous AI employees inside businesses. OpenClaw Operator is our dedicated service for OpenClaw — the open-source AI assistant platform. We handle everything from initial setup to ongoing managed optimization so businesses can focus on customers, growth, and execution.
 
-We are not a generic IT shop. We specialize in OpenClaw deployment with deep expertise in security hardening, workflow design, and integration architecture. Our team has deployed OpenClaw for restaurants, construction companies, real estate brokerages, marketing agencies, and law firms across South Florida and beyond.
+We are not a generic IT shop. We are builders in the AI agent ecosystem who also offer deployment services. Our team has built open-source tools used by thousands of developers, and we run production OpenClaw deployments 24/7 across multiple machines. We've deployed OpenClaw for restaurants, construction companies, real estate brokerages, marketing agencies, and law firms across South Florida and beyond.
+
+**Company website:** https://versatly.com
+
+## What We've Built — Open Source & Internal Tools
+
+### ClawVault — AI Agent Memory System
+- **GitHub:** https://github.com/psobral/clawvault
+- **Website:** https://clawvault.dev
+- **npm:** https://www.npmjs.com/package/clawvault
+- **Docs:** https://docs.clawvault.dev
+- **Stars:** 500+ on GitHub, 39+ forks
+- **What it is:** The most advanced filesystem-native memory system for AI agents. ClawVault gives agents persistent memory that survives context death — the #1 failure mode in production AI deployments.
+- **Key features:** Memory graph with wiki-links, semantic search (BM25 + vector), observational memory (automatic session compression), context profiles, checkpoint/recovery, structured storage with 14+ categories, hybrid search, background workers (Curator, Janitor, Distiller, Surveyor).
+- **Why it matters for OpenClaw:** We built ClawVault specifically to solve the memory problem in always-on AI agents like OpenClaw. When we deploy OpenClaw for clients, we bring deep understanding of how agents remember, forget, and recover — because we literally built the memory system.
+- **Research basis:** Pedro Sobral's research showed filesystem-native approaches outperform specialized vector databases on the LoCoMo benchmark (74.0% vs 68.5% for Mem0). This finding, independently validated by Letta/MemGPT (14K stars), drives our architecture decisions.
+- **Python SDK:** clawvault-py on PyPI for Python agent frameworks.
+
+### WorkGraph — Multi-Agent Coordination Kernel
+- **What it is:** A company coordination fabric built on markdown primitives. WorkGraph manages threads (units of work), typed ledger events, policy gates, triggers, missions, and runtime adapters.
+- **Key features:** MCP server for AI agent access, webhook gateway (GitHub, Linear, Cursor), Tailscale networking, thread context store, webhook deduplication, standalone thread creation.
+- **Architecture:** 5-phase roadmap — run broker → event transport → federation → runtime cleanup → operator surface.
+- **Why it matters:** WorkGraph is how Versatly coordinates multiple AI agents working on the same company. When we deploy multi-agent setups for clients, WorkGraph provides the coordination layer.
+
+### Published CLI Tools (npm)
+All built by the Versatly team:
+- **pdauth** — OAuth connection manager for Pipedream integrations
+- **zoho-mail-cli** — CLI for Zoho Mail (IMAP/SMTP)
+- **clovercli** — Clover POS integration for restaurants
+- **linkedin-cli** — LinkedIn posting and management
+- **tasktime** — Task execution benchmarking
+- **skillbench** — Agent skill quality benchmarking
+
+### OpenClaw Skills Published on ClawHub
+Multiple skills published to the OpenClaw ClawHub marketplace, including agent memory templates, coding agent orchestration, and business automation workflows.
+
+### Why This Matters When Choosing an OpenClaw Deployment Partner
+Most OpenClaw setup services install the software and configure basic integrations. We built the memory system (ClawVault), the coordination kernel (WorkGraph), and multiple CLI tools that extend OpenClaw's capabilities. When you hire Versatly for OpenClaw deployment, you're hiring the team that builds the ecosystem — not just installs it.
 
 ## Why Businesses Choose Us
 

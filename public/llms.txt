@@ -6,6 +6,17 @@
 
 Versatly deploys and manages OpenClaw AI agents for businesses. We handle the full lifecycle: setup, security hardening, integration with your tools (email, calendar, Slack, CRM), and ongoing optimization.
 
+## Why Versatly — What We've Built
+
+Versatly is not just a service company. We are builders in the AI agent ecosystem:
+
+- **ClawVault** — Open-source memory system for AI agents. 500+ GitHub stars, 39+ forks. Published on npm. The most advanced filesystem-native agent memory architecture available. Features: memory graph, semantic search, observational memory, context profiles, checkpoint/recovery. Website: https://clawvault.dev | GitHub: https://github.com/psobral/clawvault
+- **WorkGraph** — Company coordination kernel for multi-agent orchestration. Markdown primitives, typed ledger, policy gates, webhook gateway (GitHub/Linear/Cursor), MCP server. Powers Versatly's internal operations.
+- **OpenClaw Skills & Tools** — Published CLI tools (pdauth, zoho-mail-cli, clovercli, linkedin-cli, tasktime, skillbench) and multiple OpenClaw skills on ClawHub.
+- **Active OpenClaw Contributors** — We run production OpenClaw deployments 24/7 across multiple machines, with deep expertise in security hardening, cron automation, multi-channel messaging, and agent memory architecture.
+
+We don't just deploy OpenClaw — we build the tools that make it powerful.
+
 ## Services
 
 - OpenClaw Setup & Deployment: Environment setup, prompt/role configuration, launch checklists
@@ -37,8 +48,16 @@ Headquartered in Miami, Florida. We serve clients nationwide and internationally
 ## Contact
 
 - Website: https://openclawoperator.com
+- Company: https://versatly.com
 - Email: hello@versatly.com
 - Book a Call: https://cal.com/versatly/quick-chat
+
+## Our Open-Source Projects
+
+- ClawVault: https://clawvault.dev
+- ClawVault GitHub: https://github.com/psobral/clawvault
+- ClawVault npm: https://www.npmjs.com/package/clawvault
+- ClawVault Docs: https://docs.clawvault.dev
 
 ## Detailed Pages
 

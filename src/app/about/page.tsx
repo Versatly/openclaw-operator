@@ -55,9 +55,92 @@ export default function AboutPage() {
             deployments are built around that practical boundary.
           </p>
           <p>
-            If you are a Miami or South Florida business owner looking for openclaw consultant
-            support with real accountability, you are in the right place. We focus on measurable
-            outcomes, clear communication, and systems your team can trust over the long term.
+            If you are a business owner looking for an OpenClaw deployment partner with real
+            accountability, you are in the right place. We focus on measurable outcomes, clear
+            communication, and systems your team can trust over the long term.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-y border-onyx/10 bg-slate-50">
+        <div className="mx-auto w-full max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-2xl font-semibold text-onyx">
+            We don&apos;t just deploy OpenClaw — we build the ecosystem
+          </h2>
+          <p className="mt-4 text-base leading-8 text-onyx/80">
+            Most OpenClaw setup services install the software and configure integrations. Versatly is different.
+            We are active builders in the AI agent ecosystem, creating open-source tools used by thousands of developers worldwide.
+          </p>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-xl border border-onyx/10 bg-white p-6">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-tiger/10 text-xl">🧠</span>
+                <h3 className="font-heading text-lg font-semibold text-onyx">ClawVault</h3>
+              </div>
+              <p className="mt-2 text-sm text-onyx/70 font-medium">500+ GitHub Stars · Open Source</p>
+              <p className="mt-3 text-sm leading-7 text-onyx/80">
+                The most advanced filesystem-native memory system for AI agents. ClawVault solves context death —
+                the #1 failure mode in production AI deployments. Features memory graphs, semantic search,
+                observational memory, and checkpoint/recovery.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <a href="https://clawvault.dev" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/80 hover:border-tiger hover:text-tiger">
+                  Website →
+                </a>
+                <a href="https://github.com/psobral/clawvault" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/80 hover:border-tiger hover:text-tiger">
+                  GitHub →
+                </a>
+                <a href="https://docs.clawvault.dev" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/80 hover:border-tiger hover:text-tiger">
+                  Docs →
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-onyx/10 bg-white p-6">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-tiger/10 text-xl">⚡</span>
+                <h3 className="font-heading text-lg font-semibold text-onyx">WorkGraph</h3>
+              </div>
+              <p className="mt-2 text-sm text-onyx/70 font-medium">Multi-Agent Coordination Kernel</p>
+              <p className="mt-3 text-sm leading-7 text-onyx/80">
+                A coordination fabric for multi-agent systems built on markdown primitives. WorkGraph manages
+                threads, typed ledger events, policy gates, and webhook gateways. It powers how Versatly
+                orchestrates AI agents working together on the same company.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/70">
+                  MCP Server
+                </span>
+                <span className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/70">
+                  Webhook Gateway
+                </span>
+                <span className="inline-flex items-center rounded-full border border-onyx/15 px-3 py-1 text-xs font-medium text-onyx/70">
+                  Tailscale
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-xl border border-onyx/10 bg-white p-6">
+            <h3 className="font-heading text-lg font-semibold text-onyx">Published CLI Tools & Skills</h3>
+            <p className="mt-2 text-sm leading-7 text-onyx/80">
+              We&apos;ve published multiple npm packages and OpenClaw skills that extend what AI agents can do:
+              pdauth (OAuth connections), zoho-mail-cli, clovercli (Clover POS for restaurants), linkedin-cli,
+              tasktime (execution benchmarking), skillbench (skill quality measurement), and more.
+              Multiple skills published on the{" "}
+              <a href="https://clawhub.com" target="_blank" rel="noreferrer" className="text-tiger hover:underline">
+                ClawHub marketplace
+              </a>.
+            </p>
+          </div>
+
+          <p className="mt-8 text-sm leading-7 text-onyx/80">
+            When you hire Versatly for Miami OpenClaw setup, you&apos;re hiring the team that builds the ecosystem — not just installs it.
+            Learn more at{" "}
+            <a href="https://versatly.com" target="_blank" rel="noreferrer" className="text-tiger hover:underline">
+              versatly.com
+            </a>.
           </p>
         </div>
       </section>
