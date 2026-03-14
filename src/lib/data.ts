@@ -4,7 +4,7 @@ export const siteConfig = {
   siteName: "OpenClaw Operator by Versatly",
   domain: "https://openclawoperator.com",
   ctaLabel: "Book a Call",
-  ctaHref: "https://cal.com/versatly/openclaw-setup",
+  ctaHref: "https://cal.com/versatly/quick-chat",
   phone: "+1-305-555-0149",
   email: "hello@versatly.com",
   areasServed: [

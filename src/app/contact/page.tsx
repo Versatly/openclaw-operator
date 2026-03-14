@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalButton from "@/components/CalButton";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/lib/data";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
@@ -79,14 +80,9 @@ export default function ContactPage() {
                 required
               />
             </label>
-            <a
-              href={siteConfig.ctaHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-tiger px-4 py-3 text-sm font-semibold text-white hover:opacity-90"
-            >
+            <CalButton className="inline-flex items-center justify-center rounded-lg bg-tiger px-4 py-3 text-sm font-semibold text-white hover:opacity-90">
               Book your call
-            </a>
+            </CalButton>
           </form>
         </div>
 

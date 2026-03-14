@@ -16,7 +16,7 @@ const config: Config = {
         foreground: "#121416",
       },
       fontFamily: {
-        heading: ["var(--font-plus-jakarta)", "system-ui", "sans-serif"],
+        heading: ["var(--font-playfair-display)", "Georgia", "serif"],
       },
       keyframes: {
         fadeUp: {

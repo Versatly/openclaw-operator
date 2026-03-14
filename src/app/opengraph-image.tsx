@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
             opacity: 0.9,
           }}
         >
-          AI Agent Deployment for Miami &amp; South Florida Businesses
+          OpenClaw deployment partner for nationwide teams
         </div>
       </div>
     ),

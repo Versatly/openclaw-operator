@@ -39,7 +39,7 @@ export function buildMetadata({
           url: absoluteUrl("/opengraph-image"),
           width: 1200,
           height: 630,
-          alt: "OpenClaw Operator by Versatly for Miami and South Florida businesses",
+          alt: "OpenClaw Operator by Versatly for remote and nationwide teams",
         },
       ],
     },

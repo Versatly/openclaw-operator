@@ -2,18 +2,9 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
+import FadeIn from "@/components/FadeIn";
 import JsonLd from "@/components/JsonLd";
-import ServiceCard from "@/components/ServiceCard";
-import {
-  faqs,
-  homepageIntro,
-  pricing,
-  processSteps,
-  services,
-  siteConfig,
-  targetSegments,
-  testimonials,
-} from "@/lib/data";
+import { siteConfig } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -31,6 +22,143 @@ export const metadata = buildMetadata({
     "openclaw managed service miami",
   ],
 });
+
+const alwaysOnCapabilities = [
+  {
+    title: "Email triage and follow-up routing",
+    description:
+      "OpenClaw monitors inbound communication around the clock, classifies urgency, drafts responses, and routes ownership before work slips.",
+  },
+  {
+    title: "Calendar prep and scheduling context",
+    description:
+      "Every meeting gets agenda context, key links, and follow-up tasks so execution does not depend on memory or manual notes.",
+  },
+  {
+    title: "Slack signal monitoring",
+    description:
+      "The agent watches high-priority channels and escalates the moments that require immediate human judgment.",
+  },
+  {
+    title: "CRM consistency at scale",
+    description:
+      "Records stay clean, stage updates stay current, and next actions remain visible for sales and operations teams.",
+  },
+];
+
+const howItWorksSteps = [
+  {
+    number: "01",
+    title: "Map high-friction workflows",
+    description:
+      "We start with your highest-impact process bottlenecks and define clear success metrics before writing a single automation rule.",
+  },
+  {
+    number: "02",
+    title: "Deploy, integrate, and harden",
+    description:
+      "We configure OpenClaw with your stack, permission model, and escalation boundaries so the system is safe in production.",
+  },
+  {
+    number: "03",
+    title: "Optimize monthly with your team",
+    description:
+      "You get continuous tuning, quality reviews, and roadmap support so value compounds over time instead of plateauing.",
+  },
+];
+
+const builtForPersonas = [
+  {
+    title: "Operations leaders",
+    description:
+      "For teams that need reliability across inboxes, handoffs, and cross-functional follow-through.",
+  },
+  {
+    title: "Founder-led service companies",
+    description:
+      "For owners tired of dropped follow-ups and manual admin burden blocking growth.",
+  },
+  {
+    title: "Revenue and client teams",
+    description:
+      "For organizations that need faster response cycles without adding chaotic process overhead.",
+  },
+  {
+    title: "Multi-location operators",
+    description:
+      "For teams standardizing execution quality across locations, time zones, and communication channels.",
+  },
+];
+
+const pricingCards = [
+  {
+    label: "1 Executive Agent",
+    price: "$3,000",
+    detail: "One-time setup: VPS or Mac Mini provisioning, security hardening, email & calendar integration, up to 3 workflows, 14-day hypercare. Go live same day.",
+    features: ["VPS or Mac Mini provisioning", "Security hardening (Docker, firewall)", "Email & calendar integration", "Up to 3 workflow automations", "14-day hypercare included"],
+  },
+  {
+    label: "Additional Agent",
+    price: "$1,500",
+    detail: "Per agent with separate identity (CFO, Sales, EA). Own inbox & calendar, custom workflows, shared context with other agents. 14-day hypercare included.",
+    features: ["Separate identity & inbox", "Custom workflow config", "Shared context between agents", "14-day hypercare included"],
+  },
+  {
+    label: "Managed Care",
+    price: "Custom",
+    detail: "Monthly per agent: OAuth rotation, workflow monitoring, OpenClaw updates, integration maintenance, priority support, and monthly optimization reviews.",
+    features: ["OAuth token rotation", "Workflow drift monitoring", "Priority Slack/Telegram support", "Monthly optimization reviews"],
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Versatly helped us turn OpenClaw into an execution layer, not another dashboard. We now catch more issues before they become escalations.",
+    name: "Maya",
+    companyType: "Hospitality operations group",
+  },
+  {
+    quote:
+      "Setup was fast, but the real value was in the monthly optimization. Our team regained hours each week without losing quality control.",
+    name: "Daniel",
+    companyType: "Construction services company",
+  },
+  {
+    quote:
+      "Most providers talked features. Versatly focused on workflow outcomes. That difference made adoption easy for our team.",
+    name: "Erin",
+    companyType: "Real estate brokerage",
+  },
+];
+
+const homepageFaqs = [
+  {
+    question: "Do you deploy OpenClaw remotely, or only in South Florida?",
+    answer:
+      "Most customer deployments are remote. We work with teams across the U.S. and can support global teams as needed. Versatly is headquartered in South Florida, but delivery is remote-first.",
+  },
+  {
+    question: "How long does a typical deployment take?",
+    answer:
+      "Most deployments launch in one to three weeks depending on integration complexity and internal approvals. We phase larger environments to reduce risk and speed up learning.",
+  },
+  {
+    question: "What does the OpenClaw agent handle day-to-day?",
+    answer:
+      "Common workflows include email triage, calendar preparation, Slack escalation monitoring, CRM updates, and task routing. We define clear boundaries for where automation acts and where human review is mandatory.",
+  },
+  {
+    question: "Is security built into the setup?",
+    answer:
+      "Yes. Every deployment includes role-based permissions, scoped integrations, audit visibility, and escalation controls. Security and governance are part of the core implementation, not an add-on.",
+  },
+  {
+    question: "Who is this best suited for?",
+    answer:
+      "OpenClaw is ideal for teams with high communication volume, repeatable operational workflows, and strong execution standards. Service businesses, agencies, field teams, and multi-location operators are common fits.",
+  },
+];
 
 export default function HomePage() {
   const localBusinessSchema = {
@@ -69,7 +197,7 @@ export default function HomePage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: homepageFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -85,201 +213,166 @@ export default function HomePage() {
       <JsonLd data={faqSchema} />
       <Hero />
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-          OpenClaw setup in Miami that is built for production, not demos
-        </h2>
-        <div className="mt-6 space-y-5 text-base leading-8 text-onyx/85">
-          {homepageIntro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </section>
-
       <section className="bg-slate-50">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-            What we do: OpenClaw deployment, hardening, and integration
-          </h2>
-          <p className="mt-4 max-w-3xl text-onyx/80">
-            Our OpenClaw installation service is engineered for business outcomes. Every
-            deployment includes technical setup, operational design, and managed support so your
-            AI agent keeps improving in Miami and South Florida conditions.
-          </p>
+          <FadeIn>
+            <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
+              Always on, always working
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <p className="mt-4 max-w-3xl text-onyx/80">
+              OpenClaw should reduce operational pressure, not add another tool to babysit. We build
+              production systems that keep execution moving 24/7 with clear guardrails.
+            </p>
+          </FadeIn>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {services.map((service) => (
-              <ServiceCard key={service.title} service={service} />
+            {alwaysOnCapabilities.map((capability, index) => (
+              <FadeIn key={capability.title} delay={0.06 * index}>
+                <article className="rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                  <h3 className="font-heading text-2xl font-semibold text-onyx">{capability.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-onyx/80">{capability.description}</p>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-          Who OpenClaw Operator is for in South Florida
-        </h2>
-        <p className="mt-4 max-w-3xl text-onyx/80">
-          We deploy AI agent systems for local businesses that need reliable execution across
-          communication-heavy workflows. These are teams with growth goals, operational pressure,
-          and a need for practical automation instead of experiments.
-        </p>
+        <FadeIn>
+          <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
+            Built for teams that run on execution
+          </h2>
+        </FadeIn>
+        <FadeIn delay={0.05}>
+          <p className="mt-4 max-w-3xl text-onyx/80">
+            We are a fit for operators with real process volume, measurable goals, and a need for
+            dependable automation under pressure.
+          </p>
+        </FadeIn>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {targetSegments.map((segment) => (
-            <article key={segment.title} className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
-              <h3 className="font-heading text-xl font-semibold text-onyx">{segment.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-onyx/80">{segment.description}</p>
-            </article>
+          {builtForPersonas.map((persona, index) => (
+            <FadeIn key={persona.title} delay={0.06 * index}>
+              <article className="rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <h3 className="font-heading text-2xl font-semibold text-onyx">{persona.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-onyx/80">{persona.description}</p>
+              </article>
+            </FadeIn>
           ))}
         </div>
       </section>
 
       <section className="bg-onyx text-white">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl font-semibold sm:text-4xl">
-            How our AI assistant deployment in Miami works
-          </h2>
+          <FadeIn>
+            <h2 className="font-heading text-3xl font-semibold sm:text-4xl">How it works</h2>
+          </FadeIn>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {processSteps.map((step) => (
-              <article key={step.title} className="reveal rounded-2xl border border-white/15 bg-white/5 p-6">
-                <h3 className="font-heading text-xl font-semibold">{step.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/85">{step.description}</p>
-              </article>
+            {howItWorksSteps.map((step, index) => (
+              <FadeIn key={step.title} delay={0.06 * index}>
+                <article className="rounded-2xl border border-white/15 bg-white/5 p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-tiger">
+                    {step.number}
+                  </p>
+                  <h3 className="mt-3 font-heading text-2xl font-semibold">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/85">{step.description}</p>
+                </article>
+              </FadeIn>
             ))}
           </div>
-          <p className="mt-8 max-w-4xl text-white/80">
-            This process gives South Florida business owners clarity at every stage. You know what
-            is being deployed, why it matters, and how performance is trending. We are transparent
-            about what should be automated now, what should wait, and where human review should
-            remain mandatory. That balance is what makes OpenClaw implementation durable.
-          </p>
+          <FadeIn delay={0.18}>
+            <p className="mt-8 max-w-4xl text-white/80">
+              This process gives teams clarity at every stage: what is being automated, where risk is
+              managed, and how outcomes are improving month over month.
+            </p>
+          </FadeIn>
         </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-          Pricing for OpenClaw deployment
-        </h2>
-        <p className="mt-4 max-w-3xl text-onyx/80">
-          One-time setup fee. Most customers deploy on a cloud VPS ($5–10/mo) — we handle setup remotely.
-          Mac Mini available for teams that need iMessage or prefer local hardware (~$600 at cost).
-        </p>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {pricing.map((item, index) => (
-            <article
-              key={item.title}
-              className={`reveal rounded-2xl border p-6 shadow-sm ${
-                index === 0
-                  ? "border-tiger/30 bg-tiger/5 ring-1 ring-tiger/20"
-                  : "border-onyx/10 bg-white"
-              }`}
-            >
-              {index === 0 && (
-                <span className="mb-3 inline-block rounded-full bg-tiger px-3 py-1 text-xs font-semibold text-white">
-                  Most Popular
-                </span>
-              )}
-              <p className="text-sm uppercase tracking-wide text-onyx/60">{item.title}</p>
-              <p className="mt-2 font-heading text-4xl font-semibold text-onyx">{item.price}</p>
-              <p className="mt-1 text-sm text-onyx/60">{item.detail}</p>
-              <ul className="mt-6 space-y-3">
-                {item.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm text-onyx/80">
-                    <span className="mt-0.5 text-tiger">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              {item.note && (
-                <p className="mt-6 text-xs leading-5 text-onyx/50">{item.note}</p>
-              )}
-            </article>
-          ))}
-        </div>
-        <div className="mt-8 rounded-xl border border-green-200 bg-green-50 px-6 py-4">
-          <p className="text-sm font-medium text-green-800">
-            💰 100% satisfaction guarantee — if you&apos;re not happy with the setup, we&apos;ll refund you. No questions asked.
-          </p>
-        </div>
-        <p className="mt-4 text-sm text-onyx/70">
-          Implementation includes 14-day hypercare. Ongoing support requires Managed Care subscription.
-          Every engagement starts with a free consultation —{" "}
-          <a href="https://cal.com/versatly/quick-chat" target="_blank" rel="noreferrer" className="text-tiger hover:underline">
-            book a call
-          </a>.
-        </p>
       </section>
 
       <section className="bg-slate-50">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-            Why Miami business owners choose Versatly for OpenClaw deployment
-          </h2>
-          <div className="mt-6 space-y-5 text-base leading-8 text-onyx/85">
-            <p>
-              AI is easiest to buy when the conversation stays abstract. It becomes harder when you
-              ask specific operational questions: What exactly will this automate? Who reviews edge
-              cases? How do we prevent bad actions? How do we keep improving after launch? Versatly
-              is built around answering those questions clearly for Miami and South Florida teams.
+          <FadeIn>
+            <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">Pricing</h2>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <p className="mt-4 max-w-3xl text-onyx/80">
+              One-time setup fee. Most customers deploy on a cloud VPS ($5–10/mo). Mac Mini available for teams that need iMessage (~$600 at cost).
             </p>
-            <p>
-              Our deployments are not generic templates. They are workflow systems aligned to your
-              operating model. That means understanding your team structure, communication channels,
-              service standards, and growth constraints before we automate anything. We configure
-              OpenClaw to match that reality, not the other way around.
+          </FadeIn>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {pricingCards.map((item, index) => (
+            <FadeIn key={item.label} delay={0.06 * index}>
+              <article
+                className={`rounded-2xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${
+                  index === 0 ? "border-tiger/40 ring-1 ring-tiger/25" : "border-onyx/10"
+                }`}
+              >
+                {index === 0 && (
+                  <span className="mb-3 inline-block rounded-full bg-tiger px-3 py-1 text-xs font-semibold text-white">
+                    Most Popular
+                  </span>
+                )}
+                <p className="text-sm uppercase tracking-wide text-onyx/60">{item.label}</p>
+                <p className="mt-2 font-heading text-4xl font-semibold text-onyx">{item.price}</p>
+                <p className="mt-1 text-xs text-onyx/50">{index === 2 ? "monthly, per agent" : "one-time"}</p>
+                <ul className="mt-5 space-y-2">
+                  {item.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-onyx/80">
+                      <span className="mt-0.5 text-tiger">✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </FadeIn>
+          ))}
+        </div>
+          <FadeIn delay={0.15}>
+            <div className="mt-6 rounded-xl border border-green-200 bg-green-50 px-6 py-4">
+              <p className="text-sm font-medium text-green-800">
+                💰 100% satisfaction guarantee — if you&apos;re not happy with the setup, we&apos;ll refund you. No questions asked.
+              </p>
+            </div>
+            <p className="mt-4 text-sm text-onyx/70">
+              Implementation includes 14-day hypercare. Ongoing support requires Managed Care. Every engagement starts with a free consultation.
             </p>
-            <p>
-              We also know that local businesses need practical accountability. You need response
-              speed, measurable outcomes, and support that does not disappear after implementation.
-              That is why we include managed optimization with every long-term engagement. As your
-              organization changes, your AI system changes with it.
-            </p>
-            <p>
-              Miami and South Florida markets are dynamic. Demand spikes, team priorities shift, and
-              communication volume can surge with little warning. An AI agent that looked perfect in
-              testing can drift in production if no one is tuning it. Our monthly optimization model
-              is designed to prevent that drift and protect the value of your investment.
-            </p>
-            <p>
-              If you have been searching for openclaw consultant miami, ai automation miami, or ai
-              employee miami solutions and most options feel vague, this is the difference with
-              OpenClaw Operator: we design for execution, maintainability, and business outcomes.
-              Your team gets a dependable operating layer, not another tool to babysit.
-            </p>
-            <p>
-              The result is operational leverage that compounds. Teams respond faster, follow through
-              more consistently, and keep critical systems cleaner with less manual effort. That is
-              how AI assistant deployment in Miami creates real ROI: by making strong teams more
-              consistent, not by chasing unrealistic autonomy.
-            </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
-          Local proof from South Florida operators
-        </h2>
+        <FadeIn>
+          <h2 className="font-heading text-3xl font-semibold text-onyx sm:text-4xl">
+            What operators say after launch
+          </h2>
+        </FadeIn>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <blockquote key={testimonial.name} className="reveal rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm">
-              <p className="text-sm leading-7 text-onyx/85">&ldquo;{testimonial.quote}&rdquo;</p>
-              <cite className="mt-4 block text-xs font-semibold uppercase tracking-wide text-onyx/60">
-                {testimonial.name}
-              </cite>
-            </blockquote>
+          {testimonials.map((testimonial, index) => (
+            <FadeIn key={testimonial.name} delay={0.06 * index}>
+              <blockquote className="rounded-2xl border border-onyx/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <p className="text-sm leading-7 text-onyx/85">&ldquo;{testimonial.quote}&rdquo;</p>
+                <cite className="mt-4 block text-xs font-semibold uppercase tracking-wide text-onyx/60">
+                  {testimonial.name} - {testimonial.companyType}
+                </cite>
+              </blockquote>
+            </FadeIn>
           ))}
         </div>
       </section>
 
-      <FAQ items={faqs} />
+      <FAQ items={homepageFaqs} />
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl font-semibold text-onyx">
-          Explore more OpenClaw resources for Miami businesses
+          Explore more OpenClaw resources
         </h2>
         <div className="mt-5 flex flex-wrap gap-3 text-sm">
           <Link href="/services" className="rounded-full border border-onyx/15 px-4 py-2 text-onyx hover:border-tiger hover:text-tiger">
             Detailed services
+          </Link>
+          <Link href="/locations" className="rounded-full border border-onyx/15 px-4 py-2 text-onyx hover:border-tiger hover:text-tiger">
+            Deployment locations
           </Link>
           <Link href="/industries" className="rounded-full border border-onyx/15 px-4 py-2 text-onyx hover:border-tiger hover:text-tiger">
             Industry pages
@@ -294,8 +387,8 @@ export default function HomePage() {
       </section>
 
       <CTA
-        title="Ready to deploy OpenClaw for your Miami or South Florida business?"
-        description="Book a call with Versatly and get a practical roadmap for AI agent setup, secure deployment, and monthly managed optimization."
+        title="Ready to deploy OpenClaw with a reliable implementation partner?"
+        description="Book a quick chat with Versatly for a practical roadmap covering setup, integrations, security boundaries, and ongoing optimization."
       />
     </>
   );
