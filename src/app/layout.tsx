@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CalEmbed from "@/components/CalEmbed";
+import JsonLd from "@/components/JsonLd";
 import { primaryKeywords, secondaryKeywords, siteConfig } from "@/lib/data";
+import { cityAreaServed } from "@/lib/locations";
+import { absoluteUrl } from "@/lib/seo";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -15,6 +19,8 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
 });
+
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ?? "G-XXXXXXXXXX";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -69,6 +75,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "geo.region": "US-FL",
+    "geo.placename": "Miami",
+    "geo.position": "25.7617;-80.1918",
+    ICBM: "25.7617 -80.1918",
+  },
 };
 
 export default function RootLayout({
@@ -76,9 +88,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.brand,
+    url: siteConfig.domain,
+    logo: absoluteUrl("/opengraph-image"),
+    email: siteConfig.email,
+    telephone: siteConfig.phone,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: siteConfig.email,
+        telephone: siteConfig.phone,
+        areaServed: cityAreaServed,
+        availableLanguage: ["English"],
+      },
+    ],
+    areaServed: cityAreaServed.map((city) => ({
+      "@type": "City",
+      name: city,
+      addressCountry: "US",
+    })),
+  };
+
   return (
     <html lang="en">
       <body className={`${plusJakarta.variable} ${playfairDisplay.variable} antialiased`}>
+        <JsonLd data={organizationSchema} />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-placeholder-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${ga4MeasurementId}');`}
+        </Script>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-tiger focus:px-4 focus:py-2 focus:text-white">
           Skip to content
         </a>

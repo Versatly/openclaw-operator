@@ -5,6 +5,7 @@ import FAQ from "@/components/FAQ";
 import FadeIn from "@/components/FadeIn";
 import CalButton from "@/components/CalButton";
 import JsonLd from "@/components/JsonLd";
+import ReviewStructuredData from "@/components/seo/ReviewStructuredData";
 import { siteConfig } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 
@@ -104,6 +105,7 @@ export default function HomePage() {
     <>
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
+      <ReviewStructuredData />
       <Hero />
 
       {/* Built for */}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openclawoperator.com/sitemap.xml
+Sitemap: https://openclawoperator.com/image-sitemap.xml
+
+Host: https://openclawoperator.com

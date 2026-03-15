@@ -1,6 +1,8 @@
 import CTA from "@/components/CTA";
 import FadeIn from "@/components/FadeIn";
 import JsonLd from "@/components/JsonLd";
+import Link from "next/link";
+import { cityLocations } from "@/lib/locations";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -9,20 +11,6 @@ export const metadata = buildMetadata({
     "Versatly deploys OpenClaw remotely for teams worldwide, with strong support across major U.S. metros and headquarters in South Florida.",
   path: "/locations",
 });
-
-const metros = [
-  { slug: "miami", name: "Miami", note: "HQ and in-person option when needed" },
-  { slug: "fort-lauderdale", name: "Fort Lauderdale", note: "Remote-first setup and optimization" },
-  { slug: "west-palm-beach", name: "West Palm Beach", note: "OpenClaw deployment and managed support" },
-  { slug: "tampa", name: "Tampa", note: "Deployment, hardening, and monthly tuning" },
-  { slug: "orlando", name: "Orlando", note: "Workflow automation for growing teams" },
-  { slug: "atlanta", name: "Atlanta", note: "Remote implementation and integrations" },
-  { slug: "new-york", name: "New York", note: "High-volume operations and communication workflows" },
-  { slug: "los-angeles", name: "LA", note: "Remote-first rollout across distributed teams" },
-  { slug: "chicago", name: "Chicago", note: "Automation systems with governance controls" },
-  { slug: "austin", name: "Austin", note: "Fast launch with clear escalation boundaries" },
-  { slug: "denver", name: "Denver", note: "Managed OpenClaw support and optimization" },
-];
 
 export default function LocationsPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -63,15 +51,19 @@ export default function LocationsPage() {
             </h2>
           </FadeIn>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {metros.map((metro, index) => (
+            {cityLocations.map((metro, index) => (
               <FadeIn key={metro.slug} delay={0.04 * index}>
-                <article
+                <Link
                   id={metro.slug}
-                  className="rounded-2xl border border-onyx/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                  href={`/locations/${metro.slug}`}
+                  className="block rounded-2xl border border-onyx/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-tiger/30 hover:shadow-lg"
                 >
                   <h3 className="font-heading text-2xl font-semibold text-onyx">{metro.name}</h3>
-                  <p className="mt-3 text-sm leading-7 text-onyx/80">{metro.note}</p>
-                </article>
+                  <p className="mt-3 text-sm leading-7 text-onyx/80">{metro.summary}</p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-tiger">
+                    View {metro.name} page
+                  </p>
+                </Link>
               </FadeIn>
             ))}
           </div>
