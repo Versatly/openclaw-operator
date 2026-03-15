@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts, industries, siteConfig } from "@/lib/data";
+import { cityLocations } from "@/lib/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/services", "/industries", "/locations", "/about", "/blog", "/contact", "/open-source"];
@@ -18,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }));
 
+  const locationEntries = cityLocations.map((city) => ({
+    url: `${siteConfig.domain}/locations/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.84,
+  }));
+
   const blogEntries = blogPosts.map((post) => ({
     url: `${siteConfig.domain}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt),
@@ -25,5 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticEntries, ...industryEntries, ...blogEntries];
+  return [...staticEntries, ...industryEntries, ...locationEntries, ...blogEntries];
 }
